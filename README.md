@@ -1,2 +1,6 @@
 # projeto-poas
-A project for POAS (have no ideas for now)
+
+## Sugestões de ferramentas...
+**Protótipo de Tela:** Figma
+**Gerenciador de atividades:** ClickUp
+
