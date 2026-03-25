@@ -1,12 +1,22 @@
-# projeto-poas
+## Nome do Projeto
+XXXXXXXXXX
 
-## Tema do Projeto
-**Sistema de venda de jogos**
+## Equipe
+Cecília Maria
+David Gabriel
+Fabian Messy
+Guilherme David
 
-Exemplo: Steam
+## Descrição do Tema
+XXXXXXXXXX
 
-## Sugestões de ferramentas...
-**Protótipo de Tela:** Figma
+## Tecnologia de Frontend
+XXXXXXXXXX
 
-**Gerenciador de atividades:** ClickUp
+## Cronograma Inicial do Projeto
+| MÊS | OBJETIVOS | DATAS |
+| :--- | :---: | ---: |
+| Março |xxx|xxx|
+| Abril |xxx|xxx|
+| Maio |xxx|xxx|
 
