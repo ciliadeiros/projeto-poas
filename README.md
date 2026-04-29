@@ -11,6 +11,7 @@ O projeto tem como tema a organização e o acompanhamento da experiência dos u
 
 ## 🖥️ Tecnologias Utilizadas
 Backend: FastAPI
+
 Frontend: Next.js
 
 
