@@ -6,17 +6,11 @@ Na plataforma, cada usuário poderá montar sua própria biblioteca de jogos, cl
 ## 👤 Equipe
 Cecília Maria, David Gabriel, Fabian Messy e Guilherme David.
 
-## 📝 Descrição do Tema
+## Tema do Projeto
 O projeto tem como tema a organização e o acompanhamento da experiência dos usuários com jogos digitais. Inspirado em plataformas voltadas para catalogação e compartilhamento de experiências, como o Letterboxd e o Skoob, o sistema gira em torno da criação de um espaço digital onde seja possível gerenciar uma biblioteca de jogos, acompanhar o progresso individual e expressar opiniões por meio de avaliações e listas. Dessa forma, o tema se insere na interseção entre entretenimento, tecnologia e organização pessoal.
 
-## 🖥️ Tecnologia de Frontend
-Next.js
-
-## 🗓️ Cronograma Inicial do Projeto
-| MÊS | OBJETIVOS | DATAS |
-| :--- | :---: | ---: |
-| Março |xxx|xxx|
-| Abril |xxx|xxx|
-| Maio |xxx|xxx|
+## 🖥️ Tecnologias Utilizadas
+Backend: FastAPI
+Frontend: Next.js
 
 
