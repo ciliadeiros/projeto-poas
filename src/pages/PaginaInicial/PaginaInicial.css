@@ -1,0 +1,111 @@
+.pagina-inicial {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--glog-black);
+  font-family: var(--glog-font-base);
+}
+
+/* Camada de fundo: substitua por uma imagem de destaque (ex: arte-chave de
+   um jogo em evidência). Aqui é usado um gradiente neutro para não
+   reproduzir capas com direitos autorais. */
+.pagina-inicial__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  height: 840px;
+  background: radial-gradient(
+    circle at 30% 20%,
+    var(--glog-dark-red) 0%,
+    var(--glog-near-black) 55%,
+    var(--glog-black) 100%
+  );
+}
+
+.pagina-inicial__gradiente {
+  position: absolute;
+  top: 112px;
+  left: 0;
+  width: 100%;
+  height: 988px;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.pagina-inicial__logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 96px 100px 0;
+}
+
+/* ---------- Blocos de destaque ---------- */
+
+.pagina-inicial__imagens {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  max-width: 1720px;
+  margin: 64px auto 0;
+  padding: 0 24px;
+}
+
+.pagina-inicial__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 542px;
+  max-width: 100%;
+}
+
+.pagina-inicial__feature-label {
+  color: var(--glog-white);
+  font-size: clamp(18px, 1.6vw, 30px);
+  font-weight: 400;
+}
+
+.pagina-inicial__feature-image {
+  aspect-ratio: 1.79;
+  width: 100%;
+  border-radius: var(--glog-radius-md);
+  background: linear-gradient(135deg, var(--glog-near-black) 0%, var(--glog-dark-red) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Botões de autenticação ---------- */
+
+.pagina-inicial__botoes {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 56px 100px 96px;
+}
+
+@media (max-width: 900px) {
+  .pagina-inicial {
+    min-height: 100vh;
+  }
+
+  .pagina-inicial__logo {
+    padding: 48px 24px 0;
+  }
+
+  .pagina-inicial__imagens {
+    margin-top: 40px;
+    gap: 32px;
+  }
+
+  .pagina-inicial__botoes {
+    padding: 40px 24px 64px;
+  }
+}

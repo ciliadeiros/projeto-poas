@@ -1,0 +1,6 @@
+.glog-home {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--glog-gray-bg);
+  padding-bottom: 40px;
+}

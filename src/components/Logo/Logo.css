@@ -1,0 +1,47 @@
+.glog-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-family: var(--glog-font-display);
+  letter-spacing: 0.5px;
+}
+
+.glog-logo__game {
+  color: var(--glog-white);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.glog-logo__log {
+  background: var(--glog-red-strong);
+  color: var(--glog-white);
+  font-weight: 700;
+  border-radius: var(--glog-radius-sm);
+  padding: 0.2em 0.5em;
+  transform: translateY(1px);
+}
+
+/* Pequeno — cabeçalho das páginas internas */
+.glog-logo--sm .glog-logo__game {
+  font-size: 22px;
+}
+.glog-logo--sm .glog-logo__log {
+  font-size: 11px;
+}
+
+/* Médio — telas de login e cadastro */
+.glog-logo--md .glog-logo__game {
+  font-size: clamp(20px, 1.7vw, 34px);
+}
+.glog-logo--md .glog-logo__log {
+  font-size: clamp(9px, 0.7vw, 14px);
+}
+
+/* Grande — página inicial (landing), o logo funciona como elemento hero */
+.glog-logo--lg .glog-logo__game {
+  font-size: clamp(48px, 6vw, 96px);
+}
+.glog-logo--lg .glog-logo__log {
+  font-size: clamp(16px, 2vw, 30px);
+  padding: 0.15em 0.4em;
+}

@@ -1,0 +1,136 @@
+.cadastro-page {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 1920 / 1080;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--glog-black);
+  font-family: var(--glog-font-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Camada de fundo: substitua por um mosaico de capas de jogos, se desejar. */
+.cadastro-page__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--glog-near-black);
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 160px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 160px
+    );
+}
+
+.cadastro-page__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 10, 10, 0.5) 0%,
+    rgba(10, 10, 10, 0.72) 38%,
+    rgba(10, 10, 10, 0.88) 65%,
+    rgba(10, 10, 10, 0.93) 100%
+  );
+}
+
+.cadastro-page__logo {
+  position: absolute;
+  top: 2.7vw;
+  left: 3.2vw;
+  z-index: 2;
+}
+
+.cadastro-page .content {
+  position: relative;
+  z-index: 2;
+  width: 676px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.cadastro-page .titulo {
+  margin: 0 0 2.4vw;
+  font-family: var(--glog-font-base);
+  font-weight: 900;
+  font-size: clamp(28px, 3.3vw, 64px);
+  color: var(--glog-white);
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35vw;
+}
+
+.cadastro-form .glog-auth-btn {
+  margin-top: 1.2vw;
+  align-self: flex-end;
+}
+
+.link-login {
+  display: block;
+  margin-top: 1.6vw;
+  font-family: var(--glog-font-base);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(13px, 0.95vw, 18px);
+  color: var(--glog-white);
+  text-align: center;
+  text-decoration: none;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .cadastro-page {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    padding: 32px 20px;
+    justify-content: flex-start;
+  }
+
+  .cadastro-page__logo {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .cadastro-page .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cadastro-page .titulo {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .cadastro-form {
+    gap: 20px;
+  }
+
+  .cadastro-form .glog-auth-btn {
+    margin-top: 12px;
+  }
+
+  .link-login {
+    margin-top: 20px;
+  }
+}

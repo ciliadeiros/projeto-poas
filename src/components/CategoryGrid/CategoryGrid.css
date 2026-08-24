@@ -1,0 +1,77 @@
+.glog-categories {
+  max-width: 1824px;
+  margin: 0 auto;
+  padding: 32px 48px 0;
+}
+
+.glog-categories__see-more {
+  display: inline-block;
+  color: var(--glog-red-strong);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  transition: color 0.2s ease;
+}
+
+.glog-categories__see-more:hover {
+  color: var(--glog-red-light);
+}
+
+.glog-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  gap: 16px;
+  justify-content: start;
+}
+
+.glog-category-btn {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  border-radius: var(--glog-radius-md);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--glog-near-black);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.glog-category-btn__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.75) 100%);
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* Hover: vinheta branca nas bordas da imagem */
+.glog-category-btn:hover .glog-category-btn__overlay {
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.9), inset 0 0 60px 10px rgba(255, 255, 255, 0.35);
+}
+
+.glog-category-btn__label {
+  position: relative;
+  z-index: 1;
+  color: var(--glog-white);
+  font-family: var(--glog-font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .glog-categories {
+    padding: 24px 20px 0;
+  }
+
+  .glog-categories__grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .glog-category-btn {
+    width: 100%;
+    height: 160px;
+  }
+}

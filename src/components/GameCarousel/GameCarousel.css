@@ -1,0 +1,107 @@
+.glog-game-carousel {
+  position: relative;
+  max-width: 1824px;
+  margin: 24px auto 0;
+  padding: 24px 48px 40px;
+  background: linear-gradient(180deg, var(--glog-dark-red) 0%, var(--glog-black) 100%);
+  border-radius: var(--glog-radius-md);
+}
+
+.glog-game-carousel__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-right: 56px;
+  scrollbar-width: none;
+}
+
+.glog-game-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.glog-game-card {
+  flex: 0 0 337px;
+  width: 337px;
+  height: 177px;
+  position: relative;
+  border-radius: var(--glog-radius-sm);
+  overflow: hidden;
+  scroll-snap-align: start;
+  display: block;
+}
+
+.glog-game-card__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--glog-near-black);
+  transition: transform 0.3s ease;
+}
+
+.glog-game-card:hover .glog-game-card__image {
+  transform: scale(1.05);
+}
+
+.glog-game-card__info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 70%);
+}
+
+.glog-game-card__title {
+  margin: 0 0 6px;
+  color: var(--glog-white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.glog-game-card__tags {
+  display: flex;
+  gap: 6px;
+}
+
+.glog-game-card__tag {
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--glog-white);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--glog-radius-pill);
+}
+
+.glog-game-carousel__next {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--glog-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.glog-game-carousel__next:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .glog-game-carousel {
+    padding: 20px 20px 32px;
+  }
+
+  .glog-game-card {
+    flex: 0 0 260px;
+    width: 260px;
+    height: 137px;
+  }
+}

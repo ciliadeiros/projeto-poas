@@ -1,0 +1,154 @@
+/* Se o projeto não tiver a fonte instalada localmente, importe-a
+   (ex.: via Google Fonts) antes desta folha de estilo:
+   @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+*/
+
+/* ---------- Frame principal (1920 x 1080) ---------- */
+
+.login-page {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 1920 / 1080;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--glog-black);
+  font-family: var(--glog-font-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Camada de fundo: substitua por um mosaico de capas de jogos, se desejar.
+   Aqui é usado um padrão neutro para não reproduzir capas com direitos autorais. */
+.login-page__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--glog-near-black);
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 160px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 160px
+    );
+}
+
+.login-page__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 10, 10, 0.5) 0%,
+    rgba(10, 10, 10, 0.72) 38%,
+    rgba(10, 10, 10, 0.88) 65%,
+    rgba(10, 10, 10, 0.93) 100%
+  );
+}
+
+/* ---------- Logo ---------- */
+
+.login-page__logo {
+  position: absolute;
+  top: 2.7vw; /* ≈ 52px em 1920 */
+  left: 3.2vw; /* ≈ 62px em 1920 */
+  z-index: 2;
+}
+
+/* ---------- Conteúdo ---------- */
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 672px;
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: 12.5vw;
+}
+
+.titulo {
+  margin: 0 0 2.6vw;
+  font-family: var(--glog-font-base);
+  font-weight: 900;
+  font-size: clamp(28px, 2.5vw, 48px);
+  color: var(--glog-white);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Formulário ---------- */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35vw;
+}
+
+.login-form .glog-auth-btn {
+  margin-top: 1.2vw;
+  align-self: flex-end;
+}
+
+/* ---------- Link para a página de cadastro ---------- */
+
+.link-cadastro {
+  display: block;
+  margin-top: 1.25vw;
+  font-family: var(--glog-font-base);
+  font-style: italic;
+  font-size: clamp(12px, 0.85vw, 16px);
+  color: var(--glog-gray-text);
+  text-decoration: none;
+}
+
+.link-cadastro:hover {
+  color: var(--glog-white);
+  text-decoration: underline;
+}
+
+/* ---------- Responsivo (mobile) ---------- */
+
+@media (max-width: 720px) {
+  .login-page {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    padding: 32px 20px;
+    justify-content: flex-start;
+  }
+
+  .login-page__logo {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .login-form {
+    gap: 20px;
+  }
+
+  .login-form .glog-auth-btn {
+    margin-top: 12px;
+  }
+
+  .link-cadastro {
+    margin-top: 20px;
+  }
+}

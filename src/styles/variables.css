@@ -1,0 +1,58 @@
+/* GameLog — Design Tokens
+   Extraídos do protótipo Figma (tela "Catálogo") */
+
+:root {
+  /* Cores */
+  --glog-black: #0d0d0d;
+  --glog-near-black: #161616;
+  --glog-dark-red: #2a0808;
+  --glog-red: #a11d1d;
+  --glog-red-strong: #c1272d;
+  --glog-red-light: #d94848;
+  --glog-white: #ffffff;
+  --glog-gray-bg: #d9d9d9;
+  --glog-gray-text: #9a9a9a;
+  --glog-overlay: rgba(0, 0, 0, 0.55);
+
+  /* Telas de autenticação (login / cadastro / página inicial) */
+  --glog-input-bg: #3a3a3a;
+  --glog-input-placeholder: #c9c9c9;
+  --glog-red-hover: #8a1518;
+
+  /* Tipografia
+     Public Sans é a fonte usada no protótipo original de Login/Cadastro/Página
+     Inicial. Importe-a (ex: Google Fonts) antes deste arquivo:
+     @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400;1,600&display=swap'); */
+  --glog-font-base: 'Public Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+  --glog-font-display: 'Anton', 'Arial Black', var(--glog-font-base);
+
+  /* Espaçamentos / raio */
+  --glog-radius-sm: 6px;
+  --glog-radius-md: 12px;
+  --glog-radius-pill: 999px;
+
+  /* Layout */
+  --glog-content-width: 1920px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--glog-font-base);
+  background-color: var(--glog-gray-bg);
+  color: var(--glog-black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}

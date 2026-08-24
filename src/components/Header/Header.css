@@ -1,0 +1,120 @@
+.glog-header {
+  width: 100%;
+  background: linear-gradient(180deg, var(--glog-dark-red) 0%, var(--glog-black) 100%);
+  padding: 16px 48px 20px;
+}
+
+.glog-header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1824px;
+  margin: 0 auto;
+}
+
+/* Navegação */
+.glog-header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.glog-header__link {
+  color: var(--glog-gray-text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.glog-header__link:hover,
+.glog-header__link.is-active {
+  color: var(--glog-white);
+}
+
+/* Ações */
+.glog-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.glog-header__profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--glog-red-strong);
+  color: var(--glog-white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--glog-radius-pill);
+  transition: background 0.2s ease;
+}
+
+.glog-header__profile:hover {
+  background: var(--glog-red-light);
+}
+
+.glog-header__settings {
+  background: transparent;
+  color: var(--glog-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.glog-header__settings:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Busca */
+.glog-header__search {
+  display: flex;
+  align-items: center;
+  max-width: 1824px;
+  margin: 16px auto 0;
+  background: var(--glog-white);
+  border-radius: var(--glog-radius-pill);
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+.glog-header__search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: var(--glog-black);
+  background: transparent;
+}
+
+.glog-header__search input::placeholder {
+  color: var(--glog-gray-text);
+}
+
+.glog-header__search button {
+  background: transparent;
+  color: var(--glog-black);
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .glog-header {
+    padding: 12px 20px 16px;
+  }
+
+  .glog-header__top {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .glog-header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}

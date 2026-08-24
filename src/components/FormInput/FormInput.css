@@ -1,0 +1,47 @@
+.glog-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55vw;
+}
+
+.glog-input-group__label {
+  font-family: var(--glog-font-base);
+  font-weight: 700;
+  font-size: clamp(14px, 1vw, 19px);
+  color: var(--glog-white);
+}
+
+.glog-input-group__field {
+  width: 100%;
+  max-width: 672px;
+  height: 66px;
+  min-height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--glog-input-bg);
+  color: var(--glog-white);
+  font-family: var(--glog-font-base);
+  font-size: clamp(14px, 0.95vw, 18px);
+}
+
+.glog-input-group__field::placeholder {
+  color: var(--glog-input-placeholder);
+  font-style: italic;
+}
+
+.glog-input-group__field:focus {
+  outline: 3px solid var(--glog-red-strong);
+  outline-offset: 1px;
+}
+
+@media (max-width: 720px) {
+  .glog-input-group {
+    gap: 8px;
+  }
+
+  .glog-input-group__field {
+    height: 52px;
+    font-size: 15px;
+  }
+}
