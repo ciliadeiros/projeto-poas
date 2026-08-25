@@ -1,0 +1,90 @@
+.pgina-inicial {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagem-de-fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(320px, 44vw, 840px);
+  object-fit: cover;
+  object-position: top;
+}
+
+.gradiente-preto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(320px, 44vw, 840px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.50) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: clamp(20px, 3vw, 50px) clamp(24px, 5vw, 100px) 0;
+}
+
+.logo-gamelog-1 {
+  width: clamp(180px, 23vw, 340px);
+  height: auto;
+}
+
+.botoes-auth {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 24px;
+  padding: 12px clamp(24px, 5vw, 100px) 48px;
+}
+
+.imagens {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 24px clamp(24px, 5vw, 100px) 80px;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(100%, 420px);
+}
+
+.text-wrapper,
+.div,
+.p {
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.img-2,
+.biblioteca-exemplo {
+  width: 100%;
+  aspect-ratio: 1.79;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.saudacao {
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 20px;
+  font-weight: 500;
+}

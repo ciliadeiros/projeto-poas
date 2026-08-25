@@ -1,0 +1,56 @@
+/* .pagina, .header, .titulo, .info, .erro, .grid, .card, .capa e
+   .cardTitulo agora vêm de ../styles/lista.module.css (compartilhado
+   com o Catálogo) */
+
+.link {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.cardConteudo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: var(--color-gray-text);
+  font-family: var(--font-base);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.select {
+  background-color: var(--color-input-bg);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: var(--font-base);
+  font-size: 13px;
+}
+
+.detalhe {
+  color: var(--color-gray-text);
+  font-family: var(--font-base);
+  font-size: 13px;
+}
+
+.botaoRemover {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-red);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.botaoRemover:hover {
+  background-color: var(--color-red);
+}

@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap");
+
+:root {
+  --font-base: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --color-bg: #141414;
+  --color-red: #921013;
+  --color-red-hover: #b20000;
+  --color-white: #ffffff;
+  --color-gray-text: #d9d9d9;
+  --color-input-bg: #3a3a3a;
+  --color-input-placeholder: #c9c9c9;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  color: var(--color-white);
+  background: var(--color-bg);
+  font-family: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

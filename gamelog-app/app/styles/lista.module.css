@@ -1,0 +1,63 @@
+/*
+ * Estilos comuns às páginas de listagem de jogos (Catálogo e Biblioteca).
+ * Eram idênticos, copiados e colados em cada page.module.css — agora
+ * ficam num lugar só. Cada página continua com seu próprio
+ * page.module.css só pro que é específico dela (botões, selects, etc.).
+ */
+
+.pagina {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding: 24px clamp(24px, 5vw, 100px) 80px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.titulo {
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.info {
+  color: var(--color-gray-text);
+  font-family: var(--font-base);
+}
+
+.erro {
+  color: #ff6b6b;
+  font-family: var(--font-base);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.capa {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.cardTitulo {
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 18px;
+  font-weight: 700;
+}

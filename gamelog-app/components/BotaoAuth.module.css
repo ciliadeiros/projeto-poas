@@ -1,0 +1,30 @@
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 66px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #921013;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.botao:hover {
+  background-color: #b20000;
+}
+
+.botao:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.texto {
+  font-family: var(--font-base);
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
