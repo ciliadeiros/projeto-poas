@@ -93,6 +93,39 @@ export function searchRawg({ nome, page = 1, pageSize = 10 }) {
   return request(`/games/rawg/search?${params}`);
 }
 
+// GET /games/rawg/lista — lista jogos direto da RAWG (sem exigir nome
+// e sem gravar nada no banco). Usada pelo catálogo: destaques,
+// categorias e busca, todos com essa mesma função, só mudando os
+// filtros. Todos os parâmetros são opcionais.
+//
+// IMPORTANTE sobre "ordering": só manda esse parâmetro quando for
+// passado explicitamente. Quando tem "nome" (busca por texto) e a
+// gente força "ordering=-rating", a RAWG ordena por nota em vez de
+// relevância — é por isso que buscar "Counter-Strike 2", por exemplo,
+// não trazia o jogo certo (ele existe, só não tem nota alta o
+// suficiente pra aparecer nas 18 primeiras posições ordenadas por
+// rating). Sem "ordering", a RAWG ordena por relevância quando há
+// "search", que é o comportamento certo pra busca.
+export function listarRawg({
+  nome,
+  genero,
+  tag,
+  ordering,
+  page = 1,
+  pageSize = 20,
+} = {}) {
+  const params = new URLSearchParams({
+    page: String(page),
+    page_size: String(pageSize),
+  });
+  if (nome) params.set("nome", nome);
+  if (genero) params.set("genero", genero);
+  if (tag) params.set("tag", tag);
+  if (ordering) params.set("ordering", ordering);
+
+  return request(`/games/rawg/lista?${params}`);
+}
+
 // ---------- Library (biblioteca do usuário logado) ----------
 export function listLibrary(token) {
   return request("/library/", { token });
