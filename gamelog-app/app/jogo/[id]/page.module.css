@@ -1,0 +1,233 @@
+.pagina {
+  /* Mesmo esquema do catálogo: sobrescreve só o que precisa pra fundo
+     claro, sem mexer no base.css (ver comentário em catalogo/page.module.css). */
+  --color-bg: linear-gradient(180deg, #ededed 0%, #adacac 100%);
+
+  min-height: 100vh;
+  background: var(--color-bg);
+  padding-bottom: 100px;
+}
+
+.conteudo {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px clamp(24px, 5vw, 70px) 0;
+}
+
+/* ---------- Voltar ---------- */
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.voltar span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 100, 100, 0.35);
+}
+
+/* ---------- Estado ---------- */
+
+.info {
+  color: #4a4a4a;
+  font-family: var(--font-base);
+}
+
+.erro {
+  color: #b00000;
+  font-family: var(--font-base);
+}
+
+/* ---------- Grade principal ---------- */
+
+.grade {
+  display: grid;
+  grid-template-columns: minmax(280px, 720px) 1fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Coluna da imagem ---------- */
+
+.colunaImagem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.capa {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+}
+
+.linhaMeta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.classificacao {
+  padding: 6px 16px;
+  border-radius: 6px;
+  background-color: #f5a623;
+  color: #1a1a1a;
+  font-family: var(--font-base);
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.avaliacao {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-base);
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.estrela {
+  color: #f5c518;
+}
+
+.numAvaliacoes {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+/* ---------- Coluna de informações ---------- */
+
+.colunaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titulo {
+  font-family: var(--font-base);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ficha > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.ficha dt {
+  font-weight: 700;
+}
+
+.ficha dd {
+  font-weight: 400;
+}
+
+.subtitulo {
+  font-family: var(--font-base);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: -10px;
+}
+
+.pill {
+  padding: 10px 18px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: var(--font-base);
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Ação (adicionar à biblioteca) ---------- */
+
+.acao {
+  margin-top: 8px;
+}
+
+.botaoBiblioteca {
+  border: none;
+  border-radius: 20px;
+  padding: 14px 24px;
+  background-color: #ffcccc;
+  color: #ff0000;
+  font-family: var(--font-base);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.botaoBiblioteca:hover:not(:disabled) {
+  background-color: #ffb3b3;
+}
+
+.botaoBiblioteca:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.erroBiblioteca {
+  margin-top: 10px;
+  color: #b00000;
+  font-family: var(--font-base);
+  font-size: 14px;
+}
+
+/* ---------- Sinopse ---------- */
+
+.sinopse {
+  margin-top: 56px;
+  max-width: 1000px;
+  color: #1a1a1a;
+  font-family: var(--font-base);
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+}

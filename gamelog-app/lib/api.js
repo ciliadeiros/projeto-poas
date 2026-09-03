@@ -84,6 +84,20 @@ export function getGame(id) {
   return request(`/games/${id}`);
 }
 
+// GET /games/rawg/{id} — detalhes completos de um jogo direto da RAWG.
+// Alimenta a página de detalhes do jogo (app/jogo/[id]).
+export function getGameDetailsRawg(rawgId) {
+  return request(`/games/rawg/${rawgId}`);
+}
+
+// POST /games/rawg/{id}/importar-um — garante que o jogo exista em
+// tb_jogos (cria se ainda não existir) e devolve o registro local, já
+// com jgs_id. É o passo que roda antes de POST /library, porque a
+// biblioteca só aceita o id local, não o id da RAWG.
+export function importarUmJogoRawg(token, rawgId) {
+  return request(`/games/rawg/${rawgId}/importar-um`, { method: "POST", token });
+}
+
 export function searchRawg({ nome, page = 1, pageSize = 10 }) {
   const params = new URLSearchParams({
     nome,

@@ -1,19 +1,19 @@
 import styles from "./Logo.module.css";
 
 /**
- * Logo em texto do GameLog (GAME + LOG em destaque).
- * O export do Figma original usava uma imagem (image.png) que não
- * veio no zip — troquei por um logo em texto/CSS para não depender
- * de um arquivo que falta. Se vocês tiverem o PNG/SVG oficial da
- * marca, podem trocar o conteúdo deste componente por um <Image />
- * apontando pra ele.
+ * Logo oficial do GameLog — usa o arquivo public/images/logo.png.
+ * (O componente antes desenhava "GAME"/"LOG" em texto porque esse PNG
+ * não tinha vindo no primeiro zip enviado; agora que ele está na
+ * pasta public/images, a logo de verdade entra no lugar do texto.)
  */
 export function Logo({ className = "" }) {
   return (
-    <div className={`${styles.logo} ${className}`}>
-      <span className={styles.game}>GAME</span>
-      <span className={styles.log}>LOG</span>
-    </div>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/images/logo.png"
+      alt="GameLog"
+      className={`${styles.logo} ${className}`}
+    />
   );
 }
 

@@ -1,0 +1,39 @@
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px clamp(24px, 5vw, 100px);
+  background-color: var(--color-red);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.navLink,
+.navLinkAtivo {
+  font-family: var(--font-base);
+  font-size: 15px;
+  color: var(--color-gray-text);
+}
+
+.navLinkAtivo {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.navLink:hover {
+  color: var(--color-white);
+}
+
+.perfil {
+  font-family: var(--font-base);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 20px;
+}

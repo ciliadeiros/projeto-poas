@@ -1,26 +1,6 @@
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline-block;
+  height: clamp(28px, 2.4vw, 44px);
+  width: auto;
   z-index: 2;
-}
-
-.game {
-  font-family: var(--font-base);
-  font-size: clamp(20px, 1.7vw, 34px);
-  font-style: italic;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: 0.02em;
-}
-
-.log {
-  font-family: var(--font-base);
-  font-size: clamp(9px, 0.7vw, 14px);
-  font-weight: 900;
-  color: #ffffff;
-  background-color: #921013;
-  padding: 0.3em 0.6em;
-  border-radius: 2px;
-  transform: translateY(1px);
 }

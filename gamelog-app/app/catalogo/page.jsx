@@ -2,8 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { Logo } from "@/components/Logo";
-import { useAuth } from "@/context/AuthContext";
+import { Header } from "@/components/Header";
 import { listarRawg, ApiError } from "@/lib/api";
 import shared from "../styles/lista.module.css";
 import styles from "./page.module.css";
@@ -28,8 +27,6 @@ function mensagemErro(err, fallback) {
 }
 
 export default function CatalogoPage() {
-  const { user } = useAuth();
-
   // ---------- Destaque (carrossel do topo) ----------
   const [destaques, setDestaques] = useState([]);
   const [destaqueIndex, setDestaqueIndex] = useState(0);
@@ -99,24 +96,7 @@ export default function CatalogoPage() {
   return (
     <div className={styles.pagina}>
       {/* ---------- Cabeçalho ---------- */}
-      <header className={styles.topo}>
-        <Logo />
-        <nav className={styles.nav}>
-          <Link href="/catalogo" className={styles.navLinkAtivo}>
-            Catálogo
-          </Link>
-          <Link href="/biblioteca" className={styles.navLink}>
-            Biblioteca
-          </Link>
-        </nav>
-        {user ? (
-          <span className={styles.perfil}>{user.usr_nome_usuario}</span>
-        ) : (
-          <Link href="/login" className={styles.perfil}>
-            Entrar
-          </Link>
-        )}
-      </header>
+      <Header active="catalogo" />
 
       {/* ---------- Busca ---------- */}
       <div className={styles.buscaWrapper}>
@@ -170,7 +150,9 @@ export default function CatalogoPage() {
           </button>
 
           <div className={styles.destaqueConteudo}>
-            <h1 className={styles.destaqueTitulo}>{destaqueAtual.name}</h1>
+            <Link href={`/jogo/${destaqueAtual.id}`} className={styles.destaqueTituloLink}>
+              <h1 className={styles.destaqueTitulo}>{destaqueAtual.name}</h1>
+            </Link>
             <div className={styles.destaqueTags}>
               {(destaqueAtual.genres ?? []).slice(0, 2).map((g) => (
                 <span key={g.id} className={styles.destaqueTag}>
@@ -226,7 +208,7 @@ export default function CatalogoPage() {
 
         <div className={shared.grid}>
           {jogos.map((jogo) => (
-            <div key={jogo.id} className={shared.card}>
+            <Link key={jogo.id} href={`/jogo/${jogo.id}`} className={shared.card}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className={shared.capa}
@@ -239,7 +221,7 @@ export default function CatalogoPage() {
                   Nota: {jogo.rating?.toFixed ? jogo.rating.toFixed(1) : "—"}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
